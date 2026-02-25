@@ -1,0 +1,18 @@
+# Ejecutables compilados
+/go-secure-api
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Dependencias (Go las maneja con go.mod, no se sube la carpeta vendor usualmente)
+vendor/
+
+# Archivos de entorno/configuración sensible
+.env
+
+# Archivos de sistema/IDE
+.DS_Store
+.vscode/
+.idea/
