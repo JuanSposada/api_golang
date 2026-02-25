@@ -78,19 +78,17 @@ Actualmente, la API permite:
 
 ```plaintext
 
+go-secure-api/
 ├── cmd/
-
-│   └── api/             \# Punto de entrada (main.go)
-
+│   └── api/
+│       └── main.go       # Punto de entrada de la aplicación
 ├── internal/
-
-│   ├── executor/        \# Lógica de ejecución segura y whitelist
-
-│   ├── handlers/        \# Handlers de la API y Middleware de Auth PAM
-
-├── go.mod               \# Gestión de dependencias
-
-└── README.md
+│   ├── executor/
+│   │   └── executor.go   # Lógica para ejecutar comandos Linux
+│   └── handlers/
+│       └── system.go     # Handlers de las rutas (el POST /system/execute)
+├── go.mod                # Archivo de dependencias
+└── .gitignore            # Para excluir el binario final
 ```
 ---
 
